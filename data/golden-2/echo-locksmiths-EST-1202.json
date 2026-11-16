@@ -1,0 +1,13 @@
+{
+  "estimate_id": "EST-1202",
+  "vendor": "Echo Locksmiths (synthetic)",
+  "contact": "jobs@echo-locks.example.test",
+  "property": "Unit 7, 5 Example Lane",
+  "submitted": "2026-11-10",
+  "currency": "USD",
+  "lines": [
+    { "item": "lock-rekey", "description": "Rekey front, back and garage doors after tenant move-out", "quantity": 3, "unit_price": 72.0 },
+    { "item": "labor-hour", "description": "Adjust sticking front door strike plate", "quantity": 1, "unit_price": 65.0 }
+  ],
+  "stated_total": 281.0
+}

@@ -1,0 +1,17 @@
+{
+  "note": "Синтетичний прайс агенції для навчального прикладу. Ціни вигадані, у доларах США. Ключ — код пункту, який вендор вказує в полі item.",
+  "currency": "USD",
+  "items": {
+    "plumb-leak-repair": { "name": "Leak repair", "unit": "fixture", "max_unit_price": 150.0 },
+    "plumb-faucet-replace": { "name": "Faucet replacement incl. labor", "unit": "each", "max_unit_price": 220.0 },
+    "elec-callout": { "name": "Electrician call-out fee", "unit": "visit", "max_unit_price": 95.0 },
+    "elec-outlet-replace": { "name": "Electrical outlet replacement", "unit": "each", "max_unit_price": 85.0 },
+    "paint-wall-sqft": { "name": "Interior wall painting, two coats", "unit": "sq ft", "max_unit_price": 2.5 },
+    "hvac-service": { "name": "HVAC seasonal service", "unit": "unit", "max_unit_price": 180.0 },
+    "hvac-filter-replace": { "name": "HVAC filter replacement", "unit": "each", "max_unit_price": 40.0 },
+    "lock-rekey": { "name": "Lock rekey", "unit": "lock", "max_unit_price": 60.0 },
+    "clean-move-out": { "name": "Move-out cleaning", "unit": "hour", "max_unit_price": 45.0 },
+    "trash-haul": { "name": "Debris removal", "unit": "load", "max_unit_price": 120.0 },
+    "labor-hour": { "name": "General handyman labor", "unit": "hour", "max_unit_price": 65.0 }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "estimate_id": "EST-1203",
+  "vendor": "Foxtrot Cleaning (synthetic)",
+  "contact": "book@foxtrot-cleaning.example.test",
+  "property": "Unit 12, 6 Example Court",
+  "submitted": "2026-11-11",
+  "currency": "USD",
+  "lines": [
+    { "item": "clean-move-out", "description": "Move-out deep cleaning, two cleaners x 3 hours", "quantity": 6, "unit_price": 49.5 },
+    { "item": "trash-haul", "description": "Haul away left-behind furniture", "quantity": 1, "unit_price": 132.01 }
+  ],
+  "stated_total": 429.01
+}

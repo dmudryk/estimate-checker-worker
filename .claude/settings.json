@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Skill(estimate-checker)",
+      "Agent(estimate-verifier)",
+      "Bash(node scripts/check-estimates.mjs *)",
+      "PowerShell(node scripts/check-estimates.mjs *)",
+      "Read(/data/**)",
+      "Read(/references/**)",
+      "Read(/out/**)",
+      "Glob",
+      "Grep",
+      "Edit(/out/**)"
+    ],
+    "deny": [
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Read(**/.env*)",
+      "Read(/tests/**)",
+      "Read(/docs/**)",
+      "Read(/README.md)",
+      "Read(/out/runs/**)",
+      "Edit(/data/**)",
+      "Edit(/references/**)",
+      "Edit(/scripts/**)",
+      "Edit(/tests/**)",
+      "Edit(/docs/**)",
+      "Edit(/.claude/**)",
+      "Edit(/.github/**)",
+      "Edit(/AGENTS.md)",
+      "Edit(/CLAUDE.md)",
+      "Edit(/README.md)",
+      "Edit(/run.sh)",
+      "Edit(/run.ps1)",
+      "Edit(/.gitignore)",
+      "WebFetch",
+      "WebSearch",
+      "Bash(curl *)",
+      "Bash(wget *)",
+      "Bash(rm *)",
+      "Bash(git push *)",
+      "Bash(node -e *)",
+      "Bash(npm *)",
+      "Bash(npx *)",
+      "PowerShell(Invoke-WebRequest *)",
+      "PowerShell(Invoke-RestMethod *)",
+      "PowerShell(Remove-Item *)",
+      "PowerShell(git push *)",
+      "PowerShell(node -e *)"
+    ]
+  }
+}

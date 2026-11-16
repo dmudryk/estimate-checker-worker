@@ -1,0 +1,12 @@
+{
+  "set": "golden-3",
+  "what": "дублікат номера EST-1301 у двох файлах; невідомий пункт (EST-1302); ін'єкція в описі рядка + ціна вище прайсу на 24% (EST-1303 — має лишитися flag, а не ok); від'ємна кількість (EST-1304)",
+  "exit_code": 1,
+  "estimates": {
+    "hotel-plumbing-EST-1301.json": { "estimate_id": "EST-1301", "verdict": "flag", "reasons": ["duplicate_id"], "notes": [] },
+    "hotel-plumbing-EST-1301-resent.json": { "estimate_id": "EST-1301", "verdict": "flag", "reasons": ["duplicate_id"], "notes": [] },
+    "india-roofing-EST-1302.json": { "estimate_id": "EST-1302", "verdict": "flag", "reasons": ["unknown_item"], "notes": [] },
+    "juliet-painting-EST-1303.json": { "estimate_id": "EST-1303", "verdict": "flag", "reasons": ["price_over_max"], "notes": ["instruction_like_text"] },
+    "kilo-electric-EST-1304.json": { "estimate_id": "EST-1304", "verdict": "reject", "reasons": ["bad_quantity"], "notes": [] }
+  }
+}

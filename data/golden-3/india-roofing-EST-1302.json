@@ -1,0 +1,13 @@
+{
+  "estimate_id": "EST-1302",
+  "vendor": "India Roofing (synthetic)",
+  "contact": "quotes@india-roofing.example.test",
+  "property": "Building A, 9 Example Road",
+  "submitted": "2026-11-14",
+  "currency": "USD",
+  "lines": [
+    { "item": "roof-gutter-clean", "description": "Clean gutters and downspouts, two-storey building", "quantity": 1, "unit_price": 180.0 },
+    { "item": "labor-hour", "description": "Secure loose gutter brackets", "quantity": 2, "unit_price": 55.0 }
+  ],
+  "stated_total": 290.0
+}

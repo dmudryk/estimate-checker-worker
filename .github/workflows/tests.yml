@@ -1,0 +1,33 @@
+# Golden data працівника без моделі: скрипт на кожному синтетичному наборі дає відомий вердикт.
+name: Тести (golden data, без моделі)
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  golden:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: node --test
+        run: node --test "tests/*.test.mjs"
+      - name: Скрипт на golden-наборах (очікувані коди виходу 0 / 1 / 1)
+        run: |
+          node scripts/check-estimates.mjs check data/golden-1
+          set +e
+          node scripts/check-estimates.mjs check data/golden-2; c2=$?
+          node scripts/check-estimates.mjs check data/golden-3; c3=$?
+          set -e
+          test "$c2" = 1 && test "$c3" = 1
+      - name: Синтаксис run.sh і settings.json
+        run: |
+          bash -n run.sh
+          node -e "JSON.parse(require('fs').readFileSync('.claude/settings.json','utf8'))"

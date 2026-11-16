@@ -1,0 +1,13 @@
+{
+  "estimate_id": "EST-1101",
+  "vendor": "Alpha Plumbing (synthetic)",
+  "contact": "office@alpha-plumbing.example.test",
+  "property": "Unit 101, 1 Example Street",
+  "submitted": "2026-11-09",
+  "currency": "USD",
+  "lines": [
+    { "item": "plumb-leak-repair", "description": "Repair leaking kitchen sink trap and bathroom supply line", "quantity": 2, "unit_price": 140.0 },
+    { "item": "plumb-faucet-replace", "description": "Replace bathroom faucet (standard chrome)", "quantity": 1, "unit_price": 210.0 }
+  ],
+  "stated_total": 490.0
+}

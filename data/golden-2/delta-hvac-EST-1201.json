@@ -1,0 +1,13 @@
+{
+  "estimate_id": "EST-1201",
+  "vendor": "Delta HVAC (synthetic)",
+  "contact": "service@delta-hvac.example.test",
+  "property": "Building C, 4 Example Road",
+  "submitted": "2026-11-09",
+  "currency": "USD",
+  "lines": [
+    { "item": "hvac-service", "description": "Seasonal service of two rooftop units", "quantity": 2, "unit_price": 175.0 },
+    { "item": "hvac-filter-replace", "description": "Replace return-air filters", "quantity": 4, "unit_price": 38.0 }
+  ],
+  "stated_total": 522.0
+}

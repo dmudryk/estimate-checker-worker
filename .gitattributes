@@ -1,0 +1,4 @@
+# Усі текстові файли — з LF на будь-якій ОС: sha256 файлів кошторисів у report.json однакові в кожному клоні,
+# а run.sh читається bash навіть на Windows з core.autocrlf=true.
+* text=auto eol=lf
+*.sh text eol=lf

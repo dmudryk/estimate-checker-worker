@@ -1,0 +1,13 @@
+{
+  "estimate_id": "EST-1204",
+  "vendor": "Golf Handyman (synthetic)",
+  "contact": "golf@golf-handyman.example.test",
+  "property": "Unit 2, 7 Example Place",
+  "submitted": "2026-11-12",
+  "currency": "USD",
+  "lines": [
+    { "item": "labor-hour", "description": "Rehang closet doors and replace cabinet hinges", "quantity": 4, "unit_price": 65.0 },
+    { "item": "plumb-leak-repair", "description": "Fix dripping laundry tap", "quantity": 1, "unit_price": 150.0 }
+  ],
+  "stated_total": 410.0
+}

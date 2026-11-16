@@ -1,0 +1,13 @@
+{
+  "estimate_id": "EST-1103",
+  "vendor": "Charlie Painting (synthetic)",
+  "contact": "hello@charlie-painting.example.test",
+  "property": "Unit 3B, 3 Example Avenue",
+  "submitted": "2026-11-11",
+  "currency": "USD",
+  "lines": [
+    { "item": "paint-wall-sqft", "description": "Paint living room and hallway walls, two coats", "quantity": 412.5, "unit_price": 2.4 },
+    { "item": "labor-hour", "description": "Patch and sand drywall before painting", "quantity": 3, "unit_price": 60.0 }
+  ],
+  "stated_total": 1170.0
+}

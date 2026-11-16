@@ -1,0 +1,10 @@
+{
+  "set": "golden-1",
+  "what": "чистий набір: арифметика сходиться, ціни в межах прайсу (EST-1102 рядок 2 — рівно +10%, межа допуску)",
+  "exit_code": 0,
+  "estimates": {
+    "alpha-plumbing-EST-1101.json": { "estimate_id": "EST-1101", "verdict": "ok", "reasons": [], "notes": [] },
+    "bravo-electric-EST-1102.json": { "estimate_id": "EST-1102", "verdict": "ok", "reasons": [], "notes": [] },
+    "charlie-painting-EST-1103.json": { "estimate_id": "EST-1103", "verdict": "ok", "reasons": [], "notes": [] }
+  }
+}

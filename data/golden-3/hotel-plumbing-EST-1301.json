@@ -1,0 +1,12 @@
+{
+  "estimate_id": "EST-1301",
+  "vendor": "Hotel Plumbing (synthetic)",
+  "contact": "billing@hotel-plumbing.example.test",
+  "property": "Unit 5A, 8 Example Street",
+  "submitted": "2026-11-16",
+  "currency": "USD",
+  "lines": [
+    { "item": "plumb-leak-repair", "description": "Repair leak under bathroom vanity", "quantity": 1, "unit_price": 150.0 }
+  ],
+  "stated_total": 150.0
+}

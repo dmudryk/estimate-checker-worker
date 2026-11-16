@@ -1,0 +1,60 @@
+# Запуск перевіряльника кошторисів у GitHub Actions (anthropics/claude-code-action@v1) — лише вручну.
+# Адаптовано з шаблону курсу materials/worker-claude-code/.github/workflows/reconciler.yml.
+# Секрет репозиторію (Settings → Secrets and variables → Actions) — одне з двох:
+#   CLAUDE_CODE_OAUTH_TOKEN — токен вашої підписки з `claude setup-token`; запуски йдуть у ліміти підписки,
+#                             лише для ОСОБИСТОГО використання;
+#   ANTHROPIC_API_KEY       — ключ з Claude Console (для всього, чим користуються інші люди).
+# Щотижневий розклад: розкоментуйте schedule, коли додасте секрет (GitHub запускає його лише з гілки за замовчуванням
+# і вимикає в публічних репо після 60 днів без активності).
+name: Перевірка кошторисів (вручну)
+
+on:
+  # schedule:
+  #   - cron: "0 7 * * 1" # щопонеділка о 07:00 UTC
+  workflow_dispatch:
+    inputs:
+      period:
+        description: "Тека періоду в data/ (напр. 2026-W47 або golden-3)"
+        required: true
+        default: "golden-3"
+
+permissions:
+  contents: read
+  id-token: write # потрібен claude-code-action для автентифікації GitHub App за замовчуванням
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Період
+        id: period
+        env:
+          INPUT_PERIOD: ${{ github.event.inputs.period }} # через env, а не ${{ }} у скрипті: так ввід не стане кодом
+        run: |
+          p="${INPUT_PERIOD:-$(date -u +%G-W%V)}"
+          case "$p" in ""|*[!A-Za-z0-9._-]*|[._-]*) echo "Недопустимий період: $p"; exit 1;; esac
+          echo "value=$p" >> "$GITHUB_OUTPUT"
+      - uses: anthropics/claude-code-action@v1
+        with:
+          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          # або: anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: "/estimate-checker data/${{ steps.period.outputs.value }}"
+          claude_args: |
+            --max-turns 40
+            --permission-mode dontAsk
+            --allowedTools "Skill(estimate-checker),Agent(estimate-verifier),Bash(node scripts/check-estimates.mjs *),Read(/data/**),Read(/references/**),Read(/out/**),Glob,Grep,Edit(/out/**)"
+            --disallowedTools "Read(**/.env*),Read(/tests/**),Read(/docs/**),WebFetch,WebSearch,Bash(curl *),Bash(wget *)"
+      # Звіт лишається артефактом запуску, а не комітом: менеджер читає й вирішує.
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: estimate-report-${{ steps.period.outputs.value }}
+          path: out/
+          if-no-files-found: warn

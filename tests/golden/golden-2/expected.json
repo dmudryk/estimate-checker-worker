@@ -1,0 +1,11 @@
+{
+  "set": "golden-2",
+  "what": "арифметика не сходиться (EST-1201, +$20.00); ціна вища за прайс на 20% (EST-1202) і на 10.01% (EST-1203, межа); один чистий (EST-1204)",
+  "exit_code": 1,
+  "estimates": {
+    "delta-hvac-EST-1201.json": { "estimate_id": "EST-1201", "verdict": "reject", "reasons": ["total_mismatch"], "notes": [] },
+    "echo-locksmiths-EST-1202.json": { "estimate_id": "EST-1202", "verdict": "flag", "reasons": ["price_over_max"], "notes": [] },
+    "foxtrot-cleaning-EST-1203.json": { "estimate_id": "EST-1203", "verdict": "flag", "reasons": ["price_over_max"], "notes": [] },
+    "golf-handyman-EST-1204.json": { "estimate_id": "EST-1204", "verdict": "ok", "reasons": [], "notes": [] }
+  }
+}

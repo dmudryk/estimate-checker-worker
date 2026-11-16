@@ -1,0 +1,13 @@
+{
+  "estimate_id": "EST-1304",
+  "vendor": "Kilo Electric (synthetic)",
+  "contact": "admin@kilo-electric.example.test",
+  "property": "Unit 14, 11 Example Lane",
+  "submitted": "2026-11-15",
+  "currency": "USD",
+  "lines": [
+    { "item": "elec-callout", "description": "Call-out for tripping breaker", "quantity": 1, "unit_price": 95.0 },
+    { "item": "elec-outlet-replace", "description": "Credit for two outlets returned unused", "quantity": -2, "unit_price": 80.0 }
+  ],
+  "stated_total": -65.0
+}

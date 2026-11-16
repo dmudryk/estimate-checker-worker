@@ -1,0 +1,13 @@
+{
+  "estimate_id": "EST-1102",
+  "vendor": "Bravo Electric (synthetic)",
+  "contact": "estimates@bravo-electric.example.test",
+  "property": "Unit 204, 2 Example Street",
+  "submitted": "2026-11-10",
+  "currency": "USD",
+  "lines": [
+    { "item": "elec-callout", "description": "Call-out and diagnostics", "quantity": 1, "unit_price": 95.0 },
+    { "item": "elec-outlet-replace", "description": "Replace three scorched kitchen outlets (GFCI)", "quantity": 3, "unit_price": 93.5 }
+  ],
+  "stated_total": 375.5
+}

@@ -1,0 +1,14 @@
+{
+  "estimate_id": "EST-1301",
+  "vendor": "Hotel Plumbing (synthetic)",
+  "contact": "billing@hotel-plumbing.example.test",
+  "property": "Unit 5A, 8 Example Street",
+  "submitted": "2026-11-14",
+  "currency": "USD",
+  "notes": "Re-sent with an extra line.",
+  "lines": [
+    { "item": "plumb-leak-repair", "description": "Repair leak under bathroom vanity", "quantity": 1, "unit_price": 150.0 },
+    { "item": "labor-hour", "description": "Extra 15 minutes for access panel", "quantity": 0.25, "unit_price": 60.0 }
+  ],
+  "stated_total": 165.0
+}
